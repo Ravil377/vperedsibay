@@ -5,38 +5,100 @@ append variables
     - var pageClass = 'homepage'
     - var menuHref = '/'
 
-block top-position
-    section.top-position.mb-5
-        .module
-            .container
-                .module__title Модуль в позиции TOP
+block vreped
+    <div class="fon-b block-menu anim05">
+        <div class="thin_content">
+            <a href="/v/">
+                <img src="/bitrix/templates/dnaz_vertical/img/thin-logo.png" class="thin_logo anim05" />
+            </a>
+            <div class="hamburger mob anim05">
+                <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"><span class="menu_word">Меню</span></span>
+                <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+            </div>
+            <div class="pre_thin_click">
+                <div class="thin_click">
+                    <div class="thin_click_open anim05">Открыть меню</div>
+                    <div class="thin_click_close anim05">▲</div>
+                </div>
+            </div>
+        </div>
+        <a href="/"><img class="logo" src="/bitrix/templates/dnaz_vertical/img/logo_vps.png" /></a>
+        <hr />
 
-block columns
-    main.content--right.col-lg-9
-        article.page.textblock
-            h1.mb-5 !{title}
-
-            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, praesentium.
-            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquid consectetur consequatur deserunt dolores est ex fugit non odit reprehenderit! Animi commodi itaque magnam maxime nam obcaecati quis quos repudiandae.
-            p
-                // Подключение svg иконок
-                +icon("arrow-up")
-            p
-                img.img-fluid(src="./images/no-foto.webp" alt="")
-
-        //-pagination
-        .pagination.mt-30
-            include ./components/pagination/pagination
-
-    //- Include sidebar
-    include ./components/sidebar/sidebar--left
-
-
-block bottom-position
-    section.bottom-position.mt-5
-        .module
-            .container
-                .module__title Модуль в позиции BOTTOM
-
-
-
+        <div class="" id="bs-example-navbar-collapse-1">
+            <ul class="left-menu nav navbar-nav navbar-right">
+                <li><a href="/video/" class="page-scroll">Видео</a></li>
+                <li><a href="/otzyvy/" class="page-scroll">Отзывы</a></li>
+                <li><a href="/novosti/" class="page-scroll">Новости</a></li>
+                <li><a href="/docs/" class="page-scroll">Документы</a></li>
+                <li><a href="/fotogalereya/" class="page-scroll">Фотогалерея</a></li>
+                <li>
+                    <a class="page-scroll left_podmenu closem">Направления</a>
+                    <ul class="ul_left_podmenu anim05 closem">
+                        <li><a href="/sibay-initsiativnyy/">Сибай Инициативный</a></li>
+                        <li><a href="/sibay-gramotnyy/">Сибай Грамотный</a></li>
+                        <li><a href="/sibay-tvorcheskiy/">Сибай Творческий</a></li>
+                        <li><a href="/sibay-patrioticheskiy/">Сибай Патриотический</a></li>
+                        <li><a href="/sibay-sportivnyy/">Сибай Спортивный</a></li>
+                        <li><a href="/sibay-uyutnyy/">Сибай Уютный</a></li>
+                        <li><a href="/rodom-iz-sibaya/">Землячество г. Сибай</a></li>
+                        <li><a href="/volontyerskoe-dvizhenie/">Волонтеры г. Сибай</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="page-scroll left_podmenu closem">Полумарафон</a>
+                    <ul class="ul_left_podmenu anim05 closem v2">
+                        <li><a href="/marafon/">Пресс-релиз</a></li>
+                        <li><a href="/marafon/video.php">Видео</a></li>
+                        <li><a href="/marafon/photo.php">Фото</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="page-scroll" data-whatever="@question" data-target="#letter-menu" data-toggle="modal">Отправить письмо</a></li>
+                <li><a href="/karta/" class="page-scroll"><nobr>Интерактивная карта</nobr></a></li>
+                <li><a href="/loyalty-program/" class="page-scroll">Программа лояльности</a></li>
+                <li><a href="/join/" class="page-scroll">Заявка на вступление</a></li>
+                <li><a href="/kontakty/" class="page-scroll">Контакты</a></li>
+            </ul>
+        </div>
+        <div class="button-text">8 800 2500 342</div>
+        <div class="socs">
+            <a style="display: none;" href="https://www.facebook.com/vperedsibay/" target="_blank"></a>
+            <a href="https://vk.com/vperedsibay" target="_blank"></a>
+            <a href="https://twitter.com/vperedsibay" target="_blank"></a>
+            <a style="display: none;" href="https://www.instagram.com/moo_vperedsibay/" target="_blank"></a>
+            <a href="http://vperedsibay.livejournal.com" target="_blank"></a>
+            <a href="/nazarov/"></a>
+        </div>
+        <div class="copyright anim05">
+            <a href="/upload/PC.doc">Политика конфиденциальности</a><br />
+            <a href="/upload/POPD.doc">Политика обработки персональных данных</a>
+        </div>
+    </div>
+    <div class="content">
+        <div class="about-me mnenie fon-f3">
+            <div class="first_about">
+                <div class="video" style="background: url(/images/001.jpg) no-repeat center / cover;">
+                    <div style="display: none;" id="video-surface">
+                        <iframe style="display: table;" id="video" src="https://www.youtube.com/embed/-Zq8ytf-J1o?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen=""></iframe>
+                    </div>
+                    <div id="video-ui">
+                        <img src="./images/play-button.svg" class="play-button" />
+                    </div>
+                </div>
+            </div>
+            <div class="two_about">
+                <div class="two_about_shadow"></div>
+                <div class="text">
+                    p Уважаемые жители города Сибай! <span>Поделитесь своим мнением о работе местной общественной организации по&nbsp;поддержке социальных проектов «Вперед, Сибай!»</span>
+                    a(href="/otzyvy/") Оставить отзыв
+                    img(src='./images/rate.png' alt='rate')
+                </div>
+                <h2>Вперед, Сибай!</h2>
+                <p><br>Здравствуйте, уважаемые земляки!<br><br>Мы создали проект «Вперёд, Сибай!» чтобы сделать наш город уютным, комфортным и безопасным. Горожане поддержали проект, избрав депутатом Совета городского округа г. Сибай, Республики Башкортостан Дениса Андреевича Назарова, инициатора и лидера проекта «Вперед, Сибай!»</p><br>
+                <p><b>Пора перейти от слов к делу!</b></p><br>
+                <p>Активисты проекта «Вперёд, Сибай!» вместе с горожанами, в тесном взаимодействии со службами коммунального хозяйства городской администрации начали ремонт улиц и уличного освещения, провели субботник в парке М. Гафури. В Сибае начал работать «Университет третьего возраста».<br><br>Мы поддерживаем творческие конкурсы для детей с ограниченными возможностями «Радуга талантов», конкурс «Царство кукол-курсак», проводим конкурс среди молодых талантов в рамках направления «Сибай творческий». Мы провели турнир по футболу среди школьников и готовимся к проведению полумарафона в рамках Уфимского международного марафона.<br><br>Наши мероприятия реализуются в тесном взаимодействии с городской администрацией, депутатами, предпринимательским сообществом, общественными организациями, при поддержке жителей города. По предложениям общественности планируется много добрых дел по всем направлениям проекта «Вперёд, Сибай!».<br><br>В проекте могут принять участие все&nbsp;желающие развивать социальные инициативы, приложить свой труд и талант в любом из направлений проекта.<br><br>Мы приглашаем к сотрудничеству наших земляков, добившихся успеха в других городах и регионах России. Город вашего детства всегда ждёт вас и гордится вашими успехами.<br><br>Мы уверены, что вместе мы можем многое сделать для нашего любимого города! Вперёд, Сибай!<br></p><br><br>
+                <b class="about-me_citata">Денис Андреевич Назаров, депутат Государственного Собрания-Курултая РБ:<br>«Вместе мы сделаем город, который любим, городом которым сможем гордиться!»</b><br><br><br>
+                <img src="/bitrix/templates/dnaz_vertical/img/about-two-img.jpg"> <img alt="Назаров Денис Андреевич" src="/upload/A.jpg" class="up_main" title="Назаров Денис Андреевич">
+            </div>
+        </div>
+    </div>

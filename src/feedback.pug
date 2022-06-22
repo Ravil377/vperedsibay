@@ -1,0 +1,191 @@
+extends base/pug/base
+
+append variables
+    - var title = 'Отзывы'
+    - var pageClass = 'homepage'
+    - var menuHref = '/'
+
+block vreped
+    <div class="fon-b block-menu anim05">
+        <div class="thin_content">
+            <a href="/v/">
+                <img src="/bitrix/templates/dnaz_vertical/img/thin-logo.png" class="thin_logo anim05" />
+            </a>
+            <div class="hamburger mob anim05">
+                <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"><span class="menu_word">Меню</span></span>
+                <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+            </div>
+            <div class="pre_thin_click">
+                <div class="thin_click">
+                    <div class="thin_click_open anim05">Открыть меню</div>
+                    <div class="thin_click_close anim05">▲</div>
+                </div>
+            </div>
+        </div>
+        <a href="/"><img class="logo" src="/bitrix/templates/dnaz_vertical/img/logo_vps.png" /></a>
+        <hr />
+
+        <div class="" id="bs-example-navbar-collapse-1">
+            <ul class="left-menu nav navbar-nav navbar-right">
+                <li><a href="/video/" class="page-scroll">Видео</a></li>
+                <li><a href="/otzyvy/" class="page-scroll">Отзывы</a></li>
+                <li><a href="/novosti/" class="page-scroll">Новости</a></li>
+                <li><a href="/docs/" class="page-scroll">Документы</a></li>
+                <li><a href="/fotogalereya/" class="page-scroll">Фотогалерея</a></li>
+                <li>
+                    <a class="page-scroll left_podmenu closem">Направления</a>
+                    <ul class="ul_left_podmenu anim05 closem">
+                        <li><a href="/sibay-initsiativnyy/">Сибай Инициативный</a></li>
+                        <li><a href="/sibay-gramotnyy/">Сибай Грамотный</a></li>
+                        <li><a href="/sibay-tvorcheskiy/">Сибай Творческий</a></li>
+                        <li><a href="/sibay-patrioticheskiy/">Сибай Патриотический</a></li>
+                        <li><a href="/sibay-sportivnyy/">Сибай Спортивный</a></li>
+                        <li><a href="/sibay-uyutnyy/">Сибай Уютный</a></li>
+                        <li><a href="/rodom-iz-sibaya/">Землячество г. Сибай</a></li>
+                        <li><a href="/volontyerskoe-dvizhenie/">Волонтеры г. Сибай</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="page-scroll left_podmenu closem">Полумарафон</a>
+                    <ul class="ul_left_podmenu anim05 closem v2">
+                        <li><a href="/marafon/">Пресс-релиз</a></li>
+                        <li><a href="/marafon/video.php">Видео</a></li>
+                        <li><a href="/marafon/photo.php">Фото</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="page-scroll" data-whatever="@question" data-target="#letter-menu" data-toggle="modal">Отправить письмо</a></li>
+                <li><a href="/karta/" class="page-scroll"><nobr>Интерактивная карта</nobr></a></li>
+                <li><a href="/loyalty-program/" class="page-scroll">Программа лояльности</a></li>
+                <li><a href="/join/" class="page-scroll">Заявка на вступление</a></li>
+                <li><a href="/kontakty/" class="page-scroll">Контакты</a></li>
+            </ul>
+        </div>
+        <div class="button-text">8 800 2500 342</div>
+        <div class="socs">
+            <a style="display: none;" href="https://www.facebook.com/vperedsibay/" target="_blank"></a>
+            <a href="https://vk.com/vperedsibay" target="_blank"></a>
+            <a href="https://twitter.com/vperedsibay" target="_blank"></a>
+            <a style="display: none;" href="https://www.instagram.com/moo_vperedsibay/" target="_blank"></a>
+            <a href="http://vperedsibay.livejournal.com" target="_blank"></a>
+            <a href="/nazarov/"></a>
+        </div>
+        <div class="copyright anim05">
+            <a href="/upload/PC.doc">Политика конфиденциальности</a><br />
+            <a href="/upload/POPD.doc">Политика обработки персональных данных</a>
+        </div>
+    </div>
+    <div class="content">
+        <div class="pre-fon">
+            <div class="fon"></div>
+        </div>
+        <div class="in_content fon-f3 anim05">
+            <div class="allarea-ie"></div>
+                <div class="up_in_content" style='display: flex; flex-direction: column;'>
+                    <div class="allarea"></div>
+                        <h1>Отзывы</h1>
+                        form(action="" class='feedback__form')
+                            p.feedback__title Ваши отзывы помогают нам становиться лучше!
+                            .form__placeholder-container
+                                input(type="text" placeholder=" " required)
+                                label Как вас зовут?<span>*</span>
+                            .form__placeholder-container
+                                input(type="text" placeholder=" " required)
+                                label Ваш профиль Вконтакте<span>*</span>
+                            .form__placeholder-container
+                                input(type="text" placeholder=" " required)
+                                label Отзыв<span>*</span>
+                            p.feedback__text Как вы оцениваете работу организации?
+                            .star-rating
+                                .star-rating__wrap.star-rating__wrap-js
+                                    input(class="star-rating__input" id="star-rating-5" type="radio" name="rating" value="5")
+                                    label(class="star-rating__ico fa fa-star-o fa-lg star-rating__animation" for="star-rating-5" id='5')
+                                    input(class="star-rating__input" id="star-rating-4" type="radio" name="rating" value="4")
+                                    label(class="star-rating__ico fa fa-star-o fa-lg star-rating__animation" for="star-rating-4" id='4')
+                                    input(class="star-rating__input" id="star-rating-3" type="radio" name="rating" value="3")
+                                    label(class="star-rating__ico fa fa-star-o fa-lg star-rating__animation" for="star-rating-3" id='3')
+                                    input(class="star-rating__input" id="star-rating-2" type="radio" name="rating" value="2")
+                                    label(class="star-rating__ico fa fa-star-o fa-lg star-rating__animation" for="star-rating-2" id='2')
+                                    input(class="star-rating__input" id="star-rating-1" type="radio" name="rating" value="1")
+                                    label(class="star-rating__ico fa fa-star-o fa-lg star-rating__animation" for="star-rating-1" id='1')
+                            .feedback__bottom
+                                button(type='submit') Оставить отзыв
+                                p Нажимая на кнопку, Вы даёте согласие на обработкуперсональных данных и соглашаетесь с политикой конфиденциальности.
+                            img(src='./images/rate.png' alt='rate')
+                        .feedback__content 
+                            p Отзывы жителей г. Сибай
+                            ul.feedback__list 
+                                li.feedback__item
+                                    img(src='./images/photo1.jpg' alt='Фото')
+                                    ul.feedback__star-container
+                                        li.feedback__star
+                                            <svg width="27" height="25" viewBox="0 0 27 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M13.5 20.1316L21.87 25L19.71 15.7895L27 9.47368L17.28 8.68421L13.5 0L9.72 8.68421L0 9.47368L7.425 15.6579L5.265 24.8684L13.5 20.1316Z"/>
+                                            </svg>
+                                        li.feedback__star
+                                            <svg width="27" height="25" viewBox="0 0 27 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M13.5 20.1316L21.87 25L19.71 15.7895L27 9.47368L17.28 8.68421L13.5 0L9.72 8.68421L0 9.47368L7.425 15.6579L5.265 24.8684L13.5 20.1316Z"/>
+                                            </svg>                                        
+                                        li.feedback__star
+                                            <svg width="27" height="25" viewBox="0 0 27 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M13.5 20.1316L21.87 25L19.71 15.7895L27 9.47368L17.28 8.68421L13.5 0L9.72 8.68421L0 9.47368L7.425 15.6579L5.265 24.8684L13.5 20.1316Z"/>
+                                            </svg>
+                                        li.feedback__star
+                                            <svg width="27" height="25" viewBox="0 0 27 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M13.5 20.1316L21.87 25L19.71 15.7895L27 9.47368L17.28 8.68421L13.5 0L9.72 8.68421L0 9.47368L7.425 15.6579L5.265 24.8684L13.5 20.1316Z"/>
+                                            </svg>
+                                        li.feedback__star.feedback__star_none
+                                            <svg width="27" height="25" viewBox="0 0 27 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M13.5 20.1316L21.87 25L19.71 15.7895L27 9.47368L17.28 8.68421L13.5 0L9.72 8.68421L0 9.47368L7.425 15.6579L5.265 24.8684L13.5 20.1316Z"/>
+                                            </svg>
+                                    .feedback__text 
+                                        p В настоящее время посещаю компьютерные курсы в Доме детского творчества, очень увлекательно. Да еще и бесплатно, что очень ценно в наше время.  Ещё запланировала посещения фитнес центра в ТК Аструм, все это стало возможным благодаря Денису Назарову. Спасибо огромное, ждём новых проектов!
+                                            span 
+                                                strong Диля Нигматуллина   
+                                                | 2 февраля 2022, 10:07
+                                li.feedback__item
+                                    img(src='./images/photo2.jpg' alt='Фото')
+                                    ul.feedback__star-container
+                                        li.feedback__star
+                                            <svg width="27" height="25" viewBox="0 0 27 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M13.5 20.1316L21.87 25L19.71 15.7895L27 9.47368L17.28 8.68421L13.5 0L9.72 8.68421L0 9.47368L7.425 15.6579L5.265 24.8684L13.5 20.1316Z"/>
+                                            </svg>
+                                        li.feedback__star
+                                            <svg width="27" height="25" viewBox="0 0 27 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M13.5 20.1316L21.87 25L19.71 15.7895L27 9.47368L17.28 8.68421L13.5 0L9.72 8.68421L0 9.47368L7.425 15.6579L5.265 24.8684L13.5 20.1316Z"/>
+                                            </svg>                                        
+                                        li.feedback__star
+                                            <svg width="27" height="25" viewBox="0 0 27 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M13.5 20.1316L21.87 25L19.71 15.7895L27 9.47368L17.28 8.68421L13.5 0L9.72 8.68421L0 9.47368L7.425 15.6579L5.265 24.8684L13.5 20.1316Z"/>
+                                            </svg>
+                                        li.feedback__star.feedback__star_none
+                                            <svg width="27" height="25" viewBox="0 0 27 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M13.5 20.1316L21.87 25L19.71 15.7895L27 9.47368L17.28 8.68421L13.5 0L9.72 8.68421L0 9.47368L7.425 15.6579L5.265 24.8684L13.5 20.1316Z"/>
+                                            </svg>
+                                        li.feedback__star.feedback__star_none
+                                            <svg width="27" height="25" viewBox="0 0 27 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M13.5 20.1316L21.87 25L19.71 15.7895L27 9.47368L17.28 8.68421L13.5 0L9.72 8.68421L0 9.47368L7.425 15.6579L5.265 24.8684L13.5 20.1316Z"/>
+                                            </svg>
+                                    .feedback__text 
+                                        p Молодцы, Денис Андреевич и его команда, хотелось бы такого же, надеюсь, не временного и действенного диалога с народом и от других депутатов горсовета, где их отчеты о проделанной работе по прошлым составам горсовета, где их диалог с горожанами? Тишина после выборов... Хотелось бы их увидеть, в том числе и по Золоту, напр, там на остановке у маг."Смак" уже давно нужен знак для водителей об ограничении скорости, и зебру надо бы, а то ведь и дети там переходят дорогу, а машины несутся с большой скоростью и т.д. Может изберем Вас мэром, Денис Андреевич ?!
+                                            span 
+                                                strong Айсылу Абдрашитова
+                                                | 25 января 2022, 16:22
+                </div>
+            </div>
+        </div>     
+    </div>
+block modal
+    .modal.modal-js.modal_opened
+        .modal__container.modal__container-js
+            .modal__close.modal__close-js
+            .modal__content-success.modal__content-success-js
+                img(src="images/success.png")
+                .modal__title Ваш отзыв успешно отправлен!
+                .modal__desc Спасибо за уделенное время!
+                button.modal__btn.form_return-btn-js Вернуться на сайт
+            .modal__content-success.modal__content-success-js
+                img(src="images/unsuccess.png")
+                .modal__title При отправке отзыва произошла ошибка!
+                .modal__desc Пожалуйста, попробуйте заполнить форму еще раз
+                button.modal__btn.form_return-btn-js Вернуться на сайт
+                
